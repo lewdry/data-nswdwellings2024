@@ -7,13 +7,13 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
   :root {
-    --nsw: #2563eb;
-    --vic: #dc2626;
-    --qld: #059669;
-    --bg: #0f172a;
-    --panel: #1e293b;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
+    --nsw: #268bd2;
+    --vic: #dc322f;
+    --qld: #859900;
+    --bg: #fdf6e3;
+    --panel: #eee8d5;
+    --text: #657b83;
+    --muted: #93a1a1;
   }
   * { box-sizing: border-box; }
   body {
@@ -63,9 +63,9 @@
     cursor: pointer;
   }
   select, button {
-    background: #334155;
+    background: #eee8d5;
     color: var(--text);
-    border: 1px solid #475569;
+    border: 1px solid #93a1a1;
     border-radius: 6px;
     padding: 6px 10px;
     font-size: 0.9rem;
@@ -78,7 +78,7 @@
     line-height: 1.5;
   }
   footer a {
-    color: #60a5fa;
+    color: #268bd2;
   }
   footer a:hover {
     text-decoration: none;
@@ -123,7 +123,7 @@ const data = {
   QLD: [14.4,12,11.5,13.3,15.8,15.5,12.7,9.3,9.7,10.2,8.2,9.1,7.5,8.7,9.9,10,10.1,9.3,9.8,9.8,7.8,7.7,6.6,6.2,6.2,7,8.3,9.3,9.4,8.5,7,6,6,6.5,6.3,5.6]
 };
 
-const colors = { NSW: '#2563eb', VIC: '#dc2626', QLD: '#059669' };
+const colors = { NSW: '#268bd2', VIC: '#dc322f', QLD: '#859900' };
 
 const ctx = document.getElementById('chart').getContext('2d');
 let chartType = 'line';
@@ -156,8 +156,8 @@ function buildOptions() {
       title: { display: false }
     },
     scales: {
-      x: { title: { display: true, text: 'Year', color: '#94a3b8' }, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
-      y: { title: { display: true, text: 'Dwellings per 1,000 population', color: '#94a3b8' }, ticks: { color: '#94a3b8' }, grid: { color: '#334155' } }
+      x: { title: { display: true, text: 'Year', color: '#657b83' }, ticks: { color: '#657b83' }, grid: { color: '#d9d0bc' } },
+      y: { title: { display: true, text: 'Dwellings per 1,000 population', color: '#657b83' }, ticks: { color: '#657b83' }, grid: { color: '#d9d0bc' } }
     }
   };
 }
